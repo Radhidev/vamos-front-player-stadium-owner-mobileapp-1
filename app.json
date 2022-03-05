@@ -1,0 +1,13 @@
+{
+  "expo": {
+    "name": "Vamos",
+    "slug": "Vamos",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "android": {
+      "package": "com.radhifalez.Vamos"
+    }
+  }
+}
