@@ -1,1 +1,1 @@
-# vamos-front-player-stadium-owner-mobileapp
+# vamos
