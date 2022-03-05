@@ -1,0 +1,22 @@
+export default [
+    {
+        name:'Football',
+        iconType:'Material',
+        iconName:'face-profile'
+    },
+    {
+        name:'Basketball',
+        iconType:'Feather',
+        iconName:'settings'
+    },
+    {
+        name:'Handball',
+        iconType:'Material',
+        iconName:'bookmark-check-outline'
+    },
+    {
+        name:'Tennis',
+        iconType:'FontAwesome5',
+        iconName:'user-friends'
+    }
+ ]
