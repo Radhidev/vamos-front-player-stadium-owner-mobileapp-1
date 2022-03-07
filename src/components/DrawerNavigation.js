@@ -6,14 +6,14 @@ import Basketball from "../screens/Basketball";
 import Handball from "../screens/Handball";
 import Tennis from "../screens/Tennis";
 import LogOut from "./LogOut";
+
+
+
 const Drawer = createDrawerNavigator();
 const DrawerNavigator = () => {
   return (
     <Drawer.Navigator>
-      <Drawer.Screen name="VAMOS" component={TabNavigator} options={{ headerStyle: {
-              backgroundColor: '#9acd32'
-           }}} />
-      
+      <Drawer.Screen name="VAMOS" component={TabNavigator} options={{ headerStyle: {backgroundColor: '#9acd32'}}} />
       <Drawer.Screen name="Football" component={Football}  />
       <Drawer.Screen name="Basketball" component={Basketball} />
       <Drawer.Screen name="Handball" component={Handball} />
@@ -22,4 +22,6 @@ const DrawerNavigator = () => {
     </Drawer.Navigator>
   );
 };
+
+
 export default DrawerNavigator;

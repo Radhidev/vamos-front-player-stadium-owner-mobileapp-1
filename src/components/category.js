@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  TextInput,
-  Image,
-  ScrollView,
-} from "react-native";
+import { StyleSheet,Text,View,TextInput,Image,ScrollView } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 import stadiums from "./data";
 
@@ -19,34 +12,28 @@ export default function Category() {
         <Text style={styles.sign}>Signup</Text>
         <Text style={styles.log}>Login</Text>
         <Icon name="navicon" style={styles.category} />
-        {/* <StatusBar style="auto" /> */}
         <View
           style={{
             flexDirection: "column",
             padding: 20,
             left: 100,
-            height: 50,
-          }}
-        ></View>
-        {/* <View style={{ backgroundColor: "grey", flex: 0.3 , width: 350 ,fontSize:60   }} /> */}
+            height: 50 }}></View>
         {stadiums.map((element, index) => {
           return (
             <View key={index} style={{ margin: 10 }}>
               <Image
                 source={{ uri: element.image }}
-                style={{ width: 330, height: 100 }}
-              />
+                style={{ width: 330, height: 100 }}/>
               <Text>{element.name}</Text>
               <Text>{element.adress}</Text>
               <Text>price :{element.price} DT</Text>
               <Text>{element.contact}</Text>
-            </View>
-          );
-        })}
+            </View>)})}
       </View>
     </ScrollView>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {

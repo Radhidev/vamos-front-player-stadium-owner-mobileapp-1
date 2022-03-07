@@ -1,8 +1,13 @@
 import { Image,StyleSheet, Text, View,SafeAreaView,ScrollView,StatusBar,Dimensions } from 'react-native'
 import React,{useState} from 'react'
+import stadiums from '../data'
+
+
+
 const width=Dimensions.get('window').width
 const height=Dimensions.get('window').height
-import stadiums from '../data'
+
+
 export default function Carrousel() {
   const [imgActive,setimgActive]=useState(0)
   onchange=(nativeEvent)=>{
@@ -51,10 +56,11 @@ if(slide!=imgActive){
 }
 </View> 
     </View>
-
     </SafeAreaView>
   )
 } 
+
+
 
 const styles = StyleSheet.create({
     container:{

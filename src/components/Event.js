@@ -1,8 +1,9 @@
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
 import { auth } from "../../firebase";
-import { NavigationContainer } from "@react-navigation/native";
 import { useNavigation } from "@react-navigation/native";
+
+
 
 const Home = () => {
   const navigation = useNavigation();
@@ -24,6 +25,7 @@ const Home = () => {
     </View>
   );
 };
+
 
 export default Home;
 const styles = StyleSheet.create({

@@ -1,10 +1,4 @@
-import {
-  View,
-  Text,
-  StyleSheet,
-  useWindowDimensions,
-  Pressable,
-} from "react-native";
+import { View,Text,StyleSheet,useWindowDimensions,Pressable } from "react-native";
 import React, { useEffect, useState } from "react";
 import Input from "./Input";
 import { useNavigation } from "@react-navigation/native";
@@ -20,12 +14,9 @@ const Login = () => {
     auth.onAuthStateChanged((user) => {
       if (user) {
         navigation.navigate("Home");
-      }
-    });
-
+      }});
     return unsubscribe;
   }, []);
-
   const handlesLogin = () => {
     auth
       .signInWithEmailAndPassword(email, password)
@@ -35,23 +26,6 @@ const Login = () => {
       })
       .catch((error) => error.message);
   };
-
-  // const handlesLogin = () => {
-  //   firebase
-  //     .auth()
-  //     .signInWithEmailAndPassword(email.trim(), password)
-  //     .then((userCredential) => {
-  //       // Signed in
-  //       var user = userCredential.user;
-  //       console.log("login with ", user.email);
-  //       // ...
-  //     })
-  //     .catch((error) => {
-  //       var errorCode = error.code;
-  //       var errorMessage = error.message;
-  //     });
-  // };
-
   return (
     <View style={styles.root}>
       <Input placeholder="email" value={email} setValue={setEmail} />
@@ -59,15 +33,13 @@ const Login = () => {
         placeholder="password"
         value={password}
         setValue={setPassword}
-        secureTextEntry={true}
-      />
-
+        secureTextEntry={true}/>
       <Pressable onPress={handlesLogin} style={styles.container}>
         <Text style={styles.text}>Login </Text>
       </Pressable>
     </View>
-  );
-};
+  )};
+
 
 const styles = StyleSheet.create({
   root: {
@@ -87,4 +59,7 @@ const styles = StyleSheet.create({
     color: "white",
   },
 });
+
+
+
 export default Login;

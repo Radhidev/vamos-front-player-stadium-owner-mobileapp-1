@@ -5,9 +5,7 @@ import MapView, { PROVIDER_GOOGLE } from 'react-native-maps'
 import {Svg, Image as ImageSvg} from 'react-native-svg'
 
 export default function Map({ route }){
-
-    const {lat,lng,name,image} = route.params
-    
+const {lat,lng,name,image} = route.params
     return(
         <View style={styles.body}>
             <MapView
@@ -18,8 +16,7 @@ export default function Map({ route }){
       longitude: lng,
       latitudeDelta: 0.0922,
       longitudeDelta: 0.0421,
-    }}
-  >
+    }}>
   <Marker coordinate={{ latitude: lat, longitude: lng}}>
     <Callout>
     <Svg width={200} height={150}>
@@ -31,9 +28,10 @@ export default function Map({ route }){
   </Marker>
   </MapView>
         </View>
-    )
-}
+    )}
 
+
+    
 const styles = StyleSheet.create({
     body: {
         flex: 1,
